@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styles</title>
+</head>
+<body>
+    <p id="message">Hello, JavaScript!</p>
+    <button onclick="changeStyle()">Change Style</button>
+    
+    <script>
+    function changeStyle() {
+      const message = document.getElementById("message");
+
+      message.style.color = "blue";
+      message.style.backgroundColor = "lightyellow";
+      message.style.fontSize = "24px";
+    }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anchronous in Javascript</title>
+</head>
+<body>
+
+    <!-- <script>
+
+    async function greet() {
+        return "Hello!";
+    }
+    console.log(greet());
+
+    </script> -->
+
+
+    <h1>Learn Async JavaScript</h1>
+    <p id="message">Click the button to start.</p>
+    <button onclick="showMessage()">Load Message</button>
+    
+    <script>
+    // Step 1: Create a Promise
+    function getMessage() {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve("Hello! Your message has arrived.");
+        }, 2000);
+      });
+    }
+
+    // Step 2: Create an async function
+    async function showMessage() {
+      const messageElement = document.getElementById("message");
+
+      // Step 3: Display a loading message
+      messageElement.textContent = "Loading...";
+
+      // Step 4: Wait for the Promise to complete
+      const result = await getMessage();
+
+      // Step 5: Display the result
+      messageElement.textContent = result;
+    }
+    </script>
+
+    
+</body>
+</html>

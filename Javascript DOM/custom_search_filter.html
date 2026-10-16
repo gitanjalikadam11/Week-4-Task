@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Search Filter</title>
+
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+    }
+
+    input {
+      padding: 10px;
+      width: 250px;
+    }
+
+    li {
+      margin: 10px 0;
+    }
+  </style>
+
+</head>
+<body>
+    <h2>Search Skills</h2>
+    <input type="text" id="searchInput"
+    placeholder="Search a skill...">
+    <ul id="skillList">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+    <li>Python</li>
+    <li>SQL</li>
+    <li>Bootstrap</li>
+    </ul>
+    <p id="message"></p>
+    
+    <script>
+    const searchInput = document.getElementById("searchInput");
+    const skills = document.querySelectorAll("#skillList li");
+    const message = document.getElementById("message");
+
+    searchInput.addEventListener("input", function() {
+    const searchText = searchInput.value.toLowerCase();
+    let visibleCount = 0;
+
+    skills.forEach(function(skill) {
+    const skillName = skill.textContent.toLowerCase();
+
+    if (skillName.includes(searchText)) {
+        skill.style.display = "";
+        visibleCount++;
+    } else {
+        skill.style.display = "none";
+    }
+    });
+
+    message.textContent =
+    visibleCount === 0 ? "No skills found." : "";
+    });
+  </script>
+
+    
+</body>
+</html>

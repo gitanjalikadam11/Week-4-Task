@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Callback Practice</title>
+</head>
+<body>
+
+    <h1>Callback Function Example</h1>
+
+    <input type="text" id="username" placeholder="Enter your name">
+
+    <button id="myButton">Click Me</button>
+
+    <p id="result"></p>
+
+    <script>
+        // Function that accepts a callback
+        function greetUser(name, callback) {
+            callback(name);
+        }
+
+        // Callback function
+        function displayMessage(name) {
+            document.getElementById("result").textContent =
+                "Hello, " + name + "! Welcome to JavaScript.";
+        }
+
+        // Button click event
+        document.getElementById("myButton").addEventListener("click", function () {
+            const name = document.getElementById("username").value.trim();
+
+            if (name === "") {
+                document.getElementById("result").textContent =
+                    "Please enter your name!";
+                return;
+            }
+
+            greetUser(name, displayMessage);
+        });
+    </script>
+
+</body>
+</html>

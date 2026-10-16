@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Async Practice</title>
+</head>
+<body>
+
+    <h1>Async Function Example</h1>
+
+    <button id="myButton">Start Task</button>
+    <p id="result">Click the button to start.</p>
+
+    <script>
+        // An asynchronous function
+        async function myTask() {
+            document.getElementById("result").textContent =
+                "Task started...";
+
+            // Wait for 2 seconds
+            await new Promise(resolve => setTimeout(resolve, 2000));
+
+            document.getElementById("result").textContent =
+                "Task completed after 2 seconds!";
+        }
+
+        // Button click event
+        document.getElementById("myButton").addEventListener("click", myTask);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Throwing Errors</title>
+</head>
+<body>
+    <script>
+    
+    async function getUser() {
+        const userExists = false;
+        
+        if (!userExists) {
+            throw new Error("User not found!");
+        }
+        
+        return "User found!";
+    }
+    
+    getUser()
+    .then((result) => {
+        console.log(result);
+    })
+    .catch((error) => {
+        console.log("Error:", error.message);
+    });
+    
+    </script>
+    
+</body>
+</html>

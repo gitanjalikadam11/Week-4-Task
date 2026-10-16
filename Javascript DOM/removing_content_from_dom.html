@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Removing Content from DOM</title>
+</head>
+<body>
+    <p id="demo">This paragraph will be removed.</p>
+    <button id="removeButton">Remove Paragraph</button>
+
+    <!-- <script>
+    const paragraph = document.getElementById("demo");
+    document.getElementById("removeButton")
+    .addEventListener("click", function() {
+        paragraph.remove();
+    });
+    </script> -->
+
+    <script>
+    const parent = document.getElementById("parent")
+    const child = document.getElementById("child");
+    parent.removeChild(child);
+    </script>
+    
+</body>
+</html>

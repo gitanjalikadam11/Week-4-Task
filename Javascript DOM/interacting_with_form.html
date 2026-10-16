@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interacting With Forms</title>
+</head>
+<body>
+    <form id="myForm">
+    <label for="username">Enter your name:</label>
+    <input type="text" id="username" required>
+
+    <button type="submit">Submit</button>
+    </form>
+    <p id="message"></p>
+
+    <script>
+
+    const form = document.getElementById("myForm");
+    const username = document.getElementById("username");
+    const message = document.getElementById("message");
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+        const name = username.value;
+        message.textContent = "Welcome, " + name + "!";
+    });
+    
+    </script>
+    
+</body>
+</html>

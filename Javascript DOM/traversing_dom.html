@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traversing</title>
+</head>
+<body>
+    <div id="parent">
+        <h2>My Website</h2>
+        <p id="first">First paragraph</p>
+        <p id="second">Second paragraph</p>
+    </div>
+
+    <!-- parent element -->
+
+    <!-- <script>
+    let paragraph = document.getElementById("first");
+    console.log(paragraph.parentElement);
+    </script> -->
+
+    <!-- children element -->
+
+    <!-- <script>
+    let parent = document.getElementById("parent");
+    console.log(parent.children);
+    console.log(parent.children[0]);
+    </script> -->
+
+
+    <!-- firstElementChild and lastElementChild -->
+
+    <script>
+    let parent = document.getElementById("parent");
+    console.log(parent.firstElementChild);
+    console.log(parent.lastElementChild);
+    </script>
+
+    <!-- nextElementSibling and previousElementSibling -->
+
+    <script>
+    let first = document.getElementById("first");
+    console.log(first.nextElementSibling);
+    console.log(first.previousElementSibling);
+    </script>
+
+    
+</body>
+</html>

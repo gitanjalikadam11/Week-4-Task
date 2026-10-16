@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Await Practice</title>
+</head>
+<body>
+
+    <h1>JavaScript Await Example</h1>
+
+    <button id="startBtn">Start Task</button>
+    <p id="result">Click the button to begin.</p>
+
+    <script>
+        // Function that returns a Promise
+        function waitTwoSeconds() {
+            return new Promise(resolve => {
+                setTimeout(() => {
+                    resolve("Task completed!");
+                }, 2000);
+            });
+        }
+
+        // Async function that uses await
+        async function startTask() {
+            const result = document.getElementById("result");
+
+            result.textContent = "Please wait...";
+
+            const message = await waitTwoSeconds();
+
+            result.textContent = message;
+        }
+
+        // Button event
+        document.getElementById("startBtn")
+            .addEventListener("click", startTask);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Async Await Practice</title>
+</head>
+<body>
+    <h1>Async and Await</h1>
+
+    <button id="btn">Start</button>
+    <p id="result"></p>
+
+    <script>
+        const button = document.getElementById("btn");
+        const result = document.getElementById("result");
+
+        // A function that returns a Promise
+        function getData() {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve("Data loaded successfully!");
+                }, 2000);
+            });
+        }
+
+        // An async function
+        async function showData() {
+            result.textContent = "Loading...";
+
+            // Wait for the Promise to finish
+            const message = await getData();
+
+            result.textContent = message;
+        }
+
+        button.addEventListener("click", showData);
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async and await</title>
+</head>
+<body>
+    <!-- Async -->
+
+    <!-- <script>
+        
+    async function greet() {
+        return "Hello, JavaScript!";
+    }
+    greet().then((message) => {
+        console.log(message);
+    });
+
+    </script> -->
+
+    <!-- Await -->
+
+    <script>
+    
+    function getData() {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                resolve("Data received!");
+            }, 2000);
+        });
+    }
+    async function showData() {
+        console.log("Start");
+        const result = await getData();
+        console.log(result);
+        console.log("End");
+    }
+    
+    showData();
+    
+    </script>
+
+</body>
+</html>

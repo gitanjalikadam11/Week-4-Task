@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generators</title>
+</head>
+<body>
+    <script>
+
+        function* myGenerator() {
+            yield 1;
+            yield 2;
+            yield 3;
+        }
+        const result = myGenerator();
+
+        console.log(result.next());
+        console.log(result.next());
+        console.log(result.next());
+        console.log(result.next());
+
+
+        // generator with a for...of loop
+
+
+        /*
+        function* colors() {
+            yield "Red";
+            yield "Green";
+            yield "Blue";
+        }
+        for (const color of colors()) {
+            console.log(color);
+        }
+        */
+
+
+    </script>
+
+
+</body>
+</html>

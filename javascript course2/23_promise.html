@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Promise Practice</title>
+</head>
+<body>
+
+    <h1>JavaScript Promise Example</h1>
+
+    <button id="successBtn">Successful Promise</button>
+    <button id="failBtn">Rejected Promise</button>
+
+    <p id="result">Click a button to test a Promise.</p>
+
+    <script>
+        // Function that returns a Promise
+        function checkTask(shouldSucceed) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    if (shouldSucceed) {
+                        resolve("Success! The task is completed.");
+                    } else {
+                        reject("Error! The task failed.");
+                    }
+                }, 2000);
+            });
+        }
+
+        // Handle a successful Promise
+        document.getElementById("successBtn")
+            .addEventListener("click", () => {
+                const result = document.getElementById("result");
+                result.textContent = "Processing...";
+
+                checkTask(true)
+                    .then(message => {
+                        result.textContent = message;
+                    })
+                    .catch(error => {
+                        result.textContent = error;
+                    });
+            });
+
+        // Handle a rejected Promise
+        document.getElementById("failBtn")
+            .addEventListener("click", () => {
+                const result = document.getElementById("result");
+                result.textContent = "Processing...";
+
+                checkTask(false)
+                    .then(message => {
+                        result.textContent = message;
+                    })
+                    .catch(error => {
+                        result.textContent = error;
+                    });
+            });
+    </script>
+
+</body>
+</html>

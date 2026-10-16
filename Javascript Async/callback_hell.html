@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallBack Hell</title>
+</head>
+<body>
+    <script>
+    
+    function getUser(callback) {
+        setTimeout(() => {
+            console.log("1. User details received");
+            callback();
+        }, 1000);
+    }
+    
+    function getOrders(callback) {
+        setTimeout(() => {
+            console.log("2. Orders received");
+            callback();
+        }, 1000);
+    }
+    
+    function getPayment(callback) {
+        setTimeout(() => {
+            console.log("3. Payment received");
+            callback();
+        }, 1000);
+    }
+    
+    // Callback hell
+    getUser(function () {
+        getOrders(function () {
+            getPayment(function () {
+                console.log("4. All tasks completed!");
+            });
+        });
+    });
+    
+    </script>
+
+    
+</body>
+</html>

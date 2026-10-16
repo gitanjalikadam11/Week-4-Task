@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sets</title>
+</head>
+<body>
+    <script>
+
+        /*
+        const numbers = new Set([10, 20, 10, 30, 20]);
+        console.log(numbers);
+        */
+
+        // add() — Add a value
+
+        /*
+        const fruits = new Set();
+        fruits.add("Apple");
+        fruits.add("Mango");
+        fruits.add("Apple");
+        console.log(fruits);
+        */
+
+        // has() — Check whether a value exists
+
+        /*
+        const colors = new Set(["Red", "Blue"]);
+        console.log(colors.has("Red"));   // true
+        console.log(colors.has("Green")); // false
+        */
+
+        // delete() — Remove a value
+
+        /*
+        const numbers = new Set([10, 20, 30]);
+        numbers.delete(20);
+        console.log(numbers); // Set(2) {10, 30}
+        */
+
+        // size — Count unique values
+
+        /*
+        const items = new Set([1, 2, 2, 3, 3]);
+        console.log(items.size); // 3
+        */
+
+        // clear() — Remove all values
+
+        /*
+        const items = new Set([1, 2, 3]);
+        items.clear();
+        console.log(items.size); // 0
+        */
+
+        // Loop through a Set
+
+        /*
+        const languages = new Set(["JavaScript", "Python", "Java"]);
+        for (const language of languages) {
+            console.log(language);
+        }
+        */
+
+        // Convert an array into a Set
+
+        /*
+        const numbers = [1, 2, 2, 3, 4, 4, 5];
+        const uniqueNumbers = [...new Set(numbers)];
+        console.log(uniqueNumbers);
+        */
+
+    </script>
+</body>
+</html>

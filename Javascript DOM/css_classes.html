@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Classes</title>
+
+    <style>
+    .highlight {
+      color: white;
+      background-color: green;
+      padding: 10px;
+      border-radius: 8px;
+    }
+    </style>
+
+</head>
+<body>
+    <p id="message">Learning DOM classes</p>
+    <button onclick="addClass()">Apply Class</button>
+    
+    <script>
+    function addClass() {
+      const message = document.getElementById("message");
+      message.classList.add("highlight");
+    }
+    </script>
+    
+</body>
+</html>

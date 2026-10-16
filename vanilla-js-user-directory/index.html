@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Connect CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Connect JavaScript file -->
+    <script src="script.js" defer></script>
+
+</head>
+<body>
+    
+    <main class="container">
+
+    <h1>User Directory</h1>
+
+    <p class="description">
+      Explore and search users from a public REST API.
+    </p>
+
+    <div class="search-container">
+      <input
+        type="search"
+        id="searchInput"
+        placeholder="Search users by name..."
+        aria-label="Search users by name"
+      >
+
+      <button type="button" id="reloadButton">
+        Reload Users
+      </button>
+    </div>
+
+    <p id="status" role="status" aria-live="polite">
+      Loading users...
+    </p>
+
+    <section id="userList" aria-label="User results"></section>
+
+  </main>
+    
+</body>
+</html>

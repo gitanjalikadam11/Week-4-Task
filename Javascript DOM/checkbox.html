@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox</title>
+</head>
+<body>
+
+    <!-- <label>
+        <input type="checkbox" id="agree">
+        agree to the terms and conditions
+    </label>
+    
+    <p id="message"></p>
+    
+    <script>
+    const checkbox = document.getElementById("agree");
+    const message = document.getElementById("message");
+
+    checkbox.addEventListener("change", function() {
+      if (checkbox.checked) {
+        message.textContent = "You agreed to the terms!";
+      } else {
+        message.textContent = "You have not agreed yet.";
+      }
+    });
+    </script> -->
+    
+    <label>
+        <input type="checkbox" name="skills" value="HTML"> HTML
+    </label>
+    <label>
+        <input type="checkbox" name="skills" value="CSS"> CSS
+    </label>
+    <label>
+        <input type="checkbox" name="skills" value="JavaScript"> JavaScript
+    </label>
+    
+    <button id="showSkills">Show Selected Skills</button>
+    <p id="result"></p>
+
+    <script>
+    document.getElementById("showSkills").addEventListener("click", function() {
+        const checkboxes = document.querySelectorAll(
+            'input[name="skills"]:checked'
+        );
+        const skills = Array.from(checkboxes).map(function(box) {
+      return box.value;
+    });
+
+    document.getElementById("result").textContent =
+      skills.length ? skills.join(", ") : "No skills selected";
+    });
+   </script>
+
+   
+</body>
+</html>

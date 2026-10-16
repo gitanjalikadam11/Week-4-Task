@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attributes</title>
+</head>
+<body>
+
+    <!-- <input id="username" type="text" placeholder="Enter your name">
+    <button onclick="showAttribute()">Check Placeholder</button>
+    <p id="result"></p>
+    
+    <script>
+    function showAttribute() {
+      const input = document.getElementById("username");
+
+      const value = input.getAttribute("placeholder");
+
+      document.getElementById("result").textContent = value;
+    }
+    </script> -->
+    
+    <input id="username" type="text" placeholder="Enter your name">
+    <button onclick="changePlaceholder()">Change Placeholder</button>
+    
+    <script>
+    function changePlaceholder() {
+      const input = document.getElementById("username");
+
+      input.setAttribute("placeholder", "Type your full name");
+    }
+    </script>
+
+
+    
+</body>
+</html>
